@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Note from './Note';
 import { Button, Form } from 'react-bootstrap';
-const GIST_KEY = "";
+const GIST_KEY = "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";
 
 export class NotePad extends Component {
   state = {
@@ -107,7 +106,6 @@ export class NotePad extends Component {
 
 
   render() {
-    // console.log(this.state)
 
 
 
@@ -140,7 +138,6 @@ export class NotePad extends Component {
       </div>
 
       <div >
-        {/* <Note notes={this.state.add_note_data}/> */}
 
 
         {this.state.add_note_data.map((note) => {

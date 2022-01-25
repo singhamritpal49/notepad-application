@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NotePad from './NotePad';
 import ViewCreatedNotepad from './ViewCreatedNotePad';
-const GIST_KEY = "";
+const GIST_KEY = "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";
 
 class Home extends Component {
     state = {
@@ -24,11 +24,6 @@ class Home extends Component {
     }
 
 
-    renderNotePad = () => {
-        this.state.notepads.map((notepad) => {
-            return <NotePad notepad={this.state.notepads} />
-        })
-    }
 
     handleCallback = (childData) => {
         console.log("childData", childData)

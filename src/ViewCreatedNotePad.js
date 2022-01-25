@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import NotePad from './NotePad';
 
 
 class ViewCreatedNotepad extends Component {
@@ -12,7 +11,6 @@ class ViewCreatedNotepad extends Component {
 
 
     render() {
-        console.log(this.props)
         return (
             <div className='notepad-input'>
 
@@ -32,7 +30,25 @@ class ViewCreatedNotepad extends Component {
                             </div>
                         </div>
 
+                        {
+                            note.add_note_data.map((note) =>
+                                <div className='note-input'>
+                                    <p> My Notes</p>
 
+                                    <Form>
+                                        <Form.Group className="mb-3" style={{ "width": "380px" }}>
+                                            <Form.Control type="text" placeholder="Enter note title..." value={note.title} />
+                                        </Form.Group>
+                                        <Form.Group className="mb-3" style={{ "width": "380px" }}>
+                                            <Form.Control as="textarea" rows={3} placeholder='Enter note...' value={note.description} />
+                                        </Form.Group>
+                                        <Button className="mb-3" style={{ "margin": "5px" }} variant="success"  > Save</Button>
+                                    </Form>
+
+
+                                </div>
+                            )
+                        }
                     </>
                 )}
 
