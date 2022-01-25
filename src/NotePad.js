@@ -27,7 +27,7 @@ export class NotePad extends Component {
 
   handleSubmitForCreateNotePad = (e) => {
     if (this.state.notepad_title === '') {
-      console.log("Oops, you are missing one of the following Notepad title or Note Title or Note description ")
+      console.log("Oops, you are missing one field to fill")
       return
     }
     // console.log(this.test())
@@ -51,9 +51,9 @@ export class NotePad extends Component {
           console.log("SUCCESS", data)
         }
       })
-
-
     this.props.parentCallback(this.state)
+
+
 
 
 

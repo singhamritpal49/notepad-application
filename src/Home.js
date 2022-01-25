@@ -31,8 +31,10 @@ class Home extends Component {
     }
 
     handleCallback = (childData) => {
+        console.log("childData", childData)
         this.setState({
             data: this.state.data.concat([childData]),
+            // data: this.state.data.concat([childData]),
         })
     }
 
