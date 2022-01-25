@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Form } from 'react-bootstrap';
-const GIST_KEY = "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";
+const GIST_KEY = "";
 
 export class NotePad extends Component {
   state = {

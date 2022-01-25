@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NotePad from './NotePad';
 import ViewCreatedNotepad from './ViewCreatedNotePad';
-const GIST_KEY = "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";
+const GIST_KEY = "";
 
 class Home extends Component {
     state = {
