@@ -1,7 +1,6 @@
- body {
-
+body {
   font-family: Arial !important;
-  Color: #333 !important;
+  color: #333 !important;
 }
 /*
 code {
@@ -9,31 +8,30 @@ code {
     monospace;
 } */
 
-.notepad-buttons{
+.notepad-buttons {
   /* padding-right: 15px; */
 }
 .savebutton {
-  background-color: 39ACDC;
+  background-color: 39acdc;
 }
 
 .notepad-layout {
   display: flex;
   justify-content: space-between;
-
 }
 .btn-primary {
-  background-color: #39ACDC !important;
+  background-color: #39acdc !important;
 }
 
 .btn-danger {
-  background-color: #EC3646 !important;
+  background-color: #ec3646 !important;
 }
 .btn-success {
-  background-color: #57B93E !important;
+  background-color: #57b93e !important;
 }
 
 .notepad-input {
-  Color: #333;
+  color: #333;
   background-color: white;
   margin: 20px;
   padding: 25px;
@@ -41,7 +39,7 @@ code {
   padding-bottom: 6px;
 }
 .home {
-  background-color: rgb(238,238,238);
+  background-color: rgb(238, 238, 238);
   max-width: 1024px;
   min-width: 320px;
   padding-bottom: 6px;

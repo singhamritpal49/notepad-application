@@ -26,31 +26,25 @@ class Home extends Component {
 
 
     handleCallback = (childData) => {
-        console.log("childData", childData)
         this.setState({
             data: this.state.data.concat([childData]),
-            // data: this.state.data.concat([childData]),
         })
     }
 
 
     render() {
+        console.log(this.state)
         return (
             <div >
                 <div className='home' >
-                    <p>NotePad Application</p>
+                    <p style={{ "marginInlineStart": "25px", "paddingTop": "13px" }}>NotePad Application</p>
                     <NotePad notepad={this.state.notepads} parentCallback={this.handleCallback} />
                     {this.state.data.length ?
                         <ViewCreatedNotepad notepad={this.state.data} /> : ""
                     }
 
-                    {/* {
-                    this.state.notepads.map((notepad) => {
-                        return <NotePad notepad={notepad}/>
-                    })
-                } */}
                 </div>
-                {/* <ViewCreatedNotepad /> */}
+
             </div>
         );
     }

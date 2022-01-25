@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Form } from 'react-bootstrap';
-const GIST_KEY = "";
+const GIST_KEY = "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";
 
 export class NotePad extends Component {
   state = {
@@ -13,10 +13,7 @@ export class NotePad extends Component {
 
 
   noteParams = () => {
-
     const noteObj = {}
-
-
     for (const note of this.state.add_note_data) {
       noteObj[note.title] = { "content": note.description }
     }
@@ -25,11 +22,10 @@ export class NotePad extends Component {
 
 
   handleSubmitForCreateNotePad = (e) => {
-    if (this.state.notepad_title === '') {
-      console.log("Oops, you are missing one field to fill")
+    if (this.state.notepad_title === '' || this.state.add_note_data.length === 0) {
+      console.log("Oops, you are missing one field to fill or please add at least one note")
       return
     }
-    // console.log(this.test())
     const notePadObj = {
       "description": this.state.notepad_title,
       "public": false,
@@ -116,7 +112,7 @@ export class NotePad extends Component {
           <input type="text" className="form-control" placeholder="My notepad tittle..." onChange={(event) => this.handleChangeForCreateNotePad(event)} value={this.state.notepad_title} />
         </div>
         <div className='notepad-buttons'>
-          <Button style={{ "marginInline": "15px" }} onClick={(event) => this.handleSubmitForCreateNotePad(event)} variant='primary'> Save NotePad</Button>
+          <Button style={{ "marginInline": "15px" }} onClick={(event) => this.handleSubmitForCreateNotePad(event)} variant='primary'> Save </Button>
           <Button variant="danger" onClick={(event) => this.handleDeleteNotepad(event)} > Delete</Button>
         </div>
       </div>
@@ -131,7 +127,7 @@ export class NotePad extends Component {
           <Form.Group className="mb-3" style={{ "width": "380px" }}>
             <Form.Control as="textarea" rows={3} placeholder='Enter note...' onChange={(event) => this.handleChangeForNoteDescription(event)} value={this.state.note_description} />
           </Form.Group>
-          <Button className="mb-3" style={{ "margin": "5px" }} variant="success" onClick={(event) => this.handleAddNote(event)} > Add Note</Button>
+          <Button className="mb-3" style={{ "margin": "5px" }} variant="success" onClick={(event) => this.handleAddNote(event)} > Add</Button>
         </Form>
 
 
