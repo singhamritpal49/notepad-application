@@ -5,7 +5,7 @@
 
 Created Gists API Key and Please add it to GIST_KEY variable in Notepad.js (line 3 ) & Home.js (Line 4)
 
-### To start please ` yarn install and yarn start`
+### To start please npm install and npm start
 
 Runs the app in the development mode on http://localhost:3000
 
